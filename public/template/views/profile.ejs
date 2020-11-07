@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include("../partials/head.ejs") %>
+  <body>
+    <%-include("../partials/navbar.ejs") %>
+    <div class="container" style="min-height: 100vh">
+      <div class="row text-white">
+        <div class="col-sm-4 mt-5 mx-auto">
+          <div class="card profile-card-c border-card">
+            <div class="card-body">
+              <h4 class="card-title">Profile</h4>
+              <p class="card-text">
+                your username:
+                <span class="text-primary"><%= user.name %></span>
+              </p>
+              <p class="card-text">
+                Email: <span class="text-primary"><%= user.email %></span>
+              </p>
+              <a href="/logout" class="btn btn-danger">Logout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%- include("../partials/footer.ejs") %>
+  </body>
+</html>
